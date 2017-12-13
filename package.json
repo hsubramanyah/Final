@@ -1,0 +1,38 @@
+{
+	"name": "InterviewStudio",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"aws-sdk": "^2.133.0",
+		"firebase": "3.9.0",
+		"moment": "^2.19.1",
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.48.4",
+		"react-native-aws3": "0.0.8",
+		"react-native-beautiful-video-recorder": "^1.2.0",
+		"react-native-blur": "3.0.0-alpha",
+		"react-native-camera": "^0.10.0",
+		"react-native-compress": "^1.0.3",
+		"react-native-image-picker": "^0.26.7",
+		"react-native-image-slider": "^1.1.5",
+		"react-native-loading-spinner-overlay": "^0.5.2",
+		"react-native-spinkit": "^1.1.1",
+		"react-native-vector-icons": "^4.4.2",
+		"react-navigation": "git+https://github.com/react-community/react-navigation.git",
+		"touchable-elastic": "^1.0.2"
+	},
+	"devDependencies": {
+		"babel-jest": "21.2.0",
+		"babel-preset-react-native": "4.0.0",
+		"eslint-config-rallycoding": "^3.2.0",
+		"jest": "21.2.1",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
