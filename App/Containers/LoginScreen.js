@@ -21,8 +21,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import RoundedButton from '../Components/RoundedButton'
 
 
-const mettlesporticon = require("../Images/mettle_box_clean.png");
-const background=require("../Images/grass.png")
+const intStudioIcon = require("../Images/intStudioIcon.png");
+const background=require("../Images/background.png")
 
 class LoginScreen extends React.Component{
   keyboardDidShowListener = {}
@@ -113,7 +113,7 @@ class LoginScreen extends React.Component{
       <ImageBackground source={background} style={[Styles.backgroundImage]}>
         <ScrollView contentContainerStyle={{justifyContent: 'center'}} style={[Styles.container, {height: this.state.visibleHeight}]} keyboardShouldPersistTaps='always'>
         <View style={Styles.logoWrapper}>
-          <Image source={mettlesporticon} style={[Styles.topLogo, this.state.topLogo]} />
+          <Image source={intStudioIcon} style={[Styles.topLogo, this.state.topLogo]} />
           </View>
           <View style={Styles.textWrapper}>
             <Text style={Styles.textStyle}>

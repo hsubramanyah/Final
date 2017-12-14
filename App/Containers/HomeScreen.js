@@ -1,39 +1,35 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
-  Alert,
   View,
   ScrollView,
-  Text,
-  TextInput,
   ImageBackground,
   Image
-} from 'react-native'
-import firebaseApp from '../Config/FirebaseConfig'
-import Styles from './Styles/LoginScreenStyles'
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Metrics from '../Themes/Metrics'
-import RoundedButton from '../Components/RoundedButton'
-import VideoRecorder from 'react-native-beautiful-video-recorder';
+} from 'react-native';
+import firebaseApp from '../Config/FirebaseConfig';
+import Styles from './Styles/LoginScreenStyles';
+import Metrics from '../Themes/Metrics';
+import RoundedButton from '../Components/RoundedButton';
 
-const background = require('../Images/grass.png');
-const mettlesporticon = require('../Images/mettle_box_clean.png');
+const background = require('../Images/background.png');
+const intStudioIcon = require('../Images/intStudioIcon.png');
 
 export default class HomeScreen extends Component {
-  keyboardDidShowListener = {}
-  keyboardDidHideListener = {}
+
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       topLogo: { width: Metrics.screenWidth },
-    }
+    };
   }
+  keyboardDidShowListener = {}
+  keyboardDidHideListener = {}
   keyboardDidShow = (e) => {
     // Animation types easeInEaseOut/linear/spring
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
     let newSize = Metrics.screenHeight - e.endCoordinates.height
     this.setState({
       visibleHeight: newSize,
-      topLogo: {width: 100, height: 70}
+      topLogo: { width: 100, height: 70 }
     })
   }
 
@@ -57,9 +53,9 @@ export default class HomeScreen extends Component {
       alert(errorMessage);
     });
   }
-  handlePressFindPitch = () => {
+  handlePressListQuest = () => {
     const { navigate } = this.props.navigation;
-    navigate('pitchesScreen');
+    navigate('questionsScreen');
     //.catch(function(error) {
       // Handle Errors here.
       //var errorCode = error.code;
@@ -67,32 +63,23 @@ export default class HomeScreen extends Component {
       //alert(errorMessage);
     //});
   }
-  handlePressAddPitch = () => {
-    const { navigate } = this.props.navigation;
-    navigate('addPitch');
-    //.catch(function(error) {
-      // Handle Errors here.
-      //var errorCode = error.code;
-      //var errorMessage = error.message;
-      //alert(errorMessage);
-  }
 
-  start = () => {
-	this.videoRecorder.open((data) => {
-		console.log('captured data', data);
-	});
-}
+
 
   render() {
     return (
       <ImageBackground source={background} style={[Styles.backgroundImage]}>
-        <ScrollView contentContainerStyle={{justifyContent: 'space-around'}} style={[Styles.container]} keyboardShouldPersistTaps='always'>
+        <ScrollView
+          contentContainerStyle={{ justifyContent: 'space-around' }}
+          style={[Styles.container]}
+          keyboardShouldPersistTaps='always'
+        >
         <View style={Styles.logoWrapper}>
-          <Image source={mettlesporticon} style={[Styles.topLogo, this.state.topLogo]} />
+          <Image source={intStudioIcon} style={[Styles.topLogo, this.state.topLogo]} />
           </View>
           <View>
             <View>
-                <RoundedButton style={Styles.loginButton} onPress={this.handlePressFindPitch}>
+                <RoundedButton style={Styles.loginButton} onPress={this.handlePressListQuest}>
                   Interview Question List
                 </RoundedButton>
                 <RoundedButton style={Styles.loginButton} onPress={this.handlePressLogout}>

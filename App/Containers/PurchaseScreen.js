@@ -14,7 +14,7 @@ import RoundedButton from '../Components/RoundedButton';
 import firebaseApp from '../Config/FirebaseConfig';
 import Metrics from '../Themes/Metrics';
 
-const background = require('../Images/grass.png');
+const background = require('../Images/background.png');
 
 export default class PurchaseScreen extends Component {
   constructor(props) {
@@ -96,25 +96,7 @@ export default class PurchaseScreen extends Component {
       { text: 'Cancel', onPress: () => console.log('cancel') },
       { cancelable: false }
       ]
-    )
-
-
-    /*if (this.purchase()) {
-      this.userQuestions.child(params._key).set({
-        text: params.text,
-        feedback: false,
-        response: false
-      }).then(() => {
-        const { navigate } = this.props.navigation;
-        alert('Question Unlocked!');
-        navigate('home');
-        //this.props.navigation.pop();
-      }).catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert(errorMessage);
-      });
-    }*/
+    );
   }
   render() {
     const { params } = this.props.navigation.state;
@@ -123,7 +105,7 @@ export default class PurchaseScreen extends Component {
       <ImageBackground source={background} style={[Styles.backgroundImage]}>
         <ScrollView
         contentContainerStyle={{ justifyContent: 'center' }}
-        style={{paddingTop: 50, height: Metrics.screenHeight}} keyboardShouldPersistTaps='always'
+        style={{ paddingTop: 50, height: Metrics.screenHeight }} keyboardShouldPersistTaps='always'
         >
           <View style={{ paddingTop: 50, flex: 1 }} >
 

@@ -7,8 +7,8 @@ import LoginScreen from './LoginScreen';
 import HomeScreen from './HomeScreen';
 import ForgotPassScreen from './ForgotPassScreen';
 import SignUpScreen from './SignUpScreen';
-import PitchesScreen from './PitchesScreen';
-import SinglePitchFunctionsScreen from './SinglePitchFunctionsScreen';
+import QuestionsScreen from './QuestionsScreen';
+import SingleQuesFunctionsScreen from './SingleQuesFunctionsScreen';
 import PurchaseScreen from './PurchaseScreen';
 
 const App = StackNavigator({
@@ -54,16 +54,16 @@ const App = StackNavigator({
   },
 
 
-  pitchesScreen:{
-      screen: PitchesScreen,
+  questionsScreen:{
+      screen: QuestionsScreen,
       navigationOptions:{
         headerStyle:{ position: 'absolute', backgroundColor: '#3cc1e7', zIndex: 100, top: 0, left: 0, right: 0 },
         headerVisible: false,
         title:'Questions'
       }
   },
-  singlePitchFunctionsScreen:{
-      screen: SinglePitchFunctionsScreen,
+  singleQuesFunctionsScreen:{
+      screen: SingleQuesFunctionsScreen,
       navigationOptions:{
         headerStyle:{ position: 'absolute', backgroundColor: '#3cc1e7', zIndex: 100, top: 0, left: 0, right: 0 },
         headerVisible: false,

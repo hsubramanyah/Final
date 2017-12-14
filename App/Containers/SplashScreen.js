@@ -13,8 +13,8 @@ const S3 = new AWS.S3({
 
 })
 
-const mettlesporticon = require("../Images/mettle_box_clean.png");
-const background=require("../Images/grass.png")
+const intStudioIcon = require("../Images/intStudioIcon.png");
+const background=require("../Images/background.png")
 
 export default class SplashScreen extends Component {
 
@@ -77,7 +77,7 @@ export default class SplashScreen extends Component {
 
       <ScrollView contentContainerStyle={{flex:1, flexDirection: 'column', justifyContent: 'center'}} style={[Styles.container]} keyboardShouldPersistTaps='always'>
 
-          <Image source={mettlesporticon} style={[Styles.topLogo]} />
+          <Image source={intStudioIcon} style={[Styles.topLogo]} />
         </ScrollView>
       </ImageBackground>
       </View>

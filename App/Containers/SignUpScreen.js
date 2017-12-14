@@ -19,11 +19,8 @@ import AWSConfig from '../Config/AWS';
 import { RNS3 } from 'react-native-aws3';
 
 
-const mettlesporticon = require("../Images/Capture.jpg");
-const background=require("../Images/grass.png");
+const background=require("../Images/background.png");
 
-const image1=require("../Images/image1.jpg");
-const image2=require("../Images/image2.jpg");
 
 class SignUpScreen extends React.Component {
 
@@ -33,19 +30,7 @@ class SignUpScreen extends React.Component {
 
   constructor (props) {
     super(props)
-    //var ques1={};
-    /*question1 = firebaseApp.database().ref('/questions/question1');
-    question1.once('value', (dataSnapshot) => {
-      ques1={
-      text: dataSnapshot.child("text").val(),
-      response: false,
-      feedback: false
 
-      }
-      this.questions ={
-        question1: ques1
-      }
-    });*/
 
 
     this.state = {
@@ -77,31 +62,6 @@ class SignUpScreen extends React.Component {
     clearInterval(this.state.interval);
   }
 
-  /*createFoldersInAWS() {
-    const file = {
-      // `uri` can also be a file system path (i.e. file://)
-      uri: '/Users/macpc/Desktop/images.jpeg',
-      name: "image1.jpeg",
-      type: "image/jpeg"
-    }
-
-    const options = {
-      keyPrefix: "testfolder2/",
-      bucket: "react-app-store-video",
-
-      successActionStatus: 201,
-      acl: 'public-read',
-      region: AWSConfig.region,
-      accessKey: AWSConfig.accessKey,
-      secretKey: AWSConfig.secretKey
-    }
-
-    RNS3.put({}, options).then(response => {
-      if (response.status !== 201)
-        throw new Error("Failed to upload image to S3");
-      console.log(response.body);
-    });
-  }*/
 
   keyboardDidShow = (e) => {
     // Animation types easeInEaseOut/linear/spring

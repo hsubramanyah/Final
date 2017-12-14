@@ -7,20 +7,16 @@ import {
   TextInput,
   ImageBackground,
   TouchableOpacity
-} from 'react-native'
-import Styles from './Styles/ForgotPassScreenStyles'
-import Metrics from '../Themes/Metrics'
-import RoundedButton from '../Components/RoundedButton'
-
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+} from 'react-native';
+import Styles from './Styles/ForgotPassScreenStyles';
+import Metrics from '../Themes/Metrics';
 import FoundationIcon from 'react-native-vector-icons/Foundation';
+import firebaseApp from '../Config/FirebaseConfig';
 
-import firebaseApp from '../Config/FirebaseConfig'
-
-const background=require("../Images/grass.png")
+const background = require("../Images/background.png");
 const alertMessage = 'The password reset link has been sent to your email.'
 
-class LoginScreen extends React.Component {
+class ForgotPassScreen extends React.Component {
 
   constructor (props) {
     super(props)
@@ -91,4 +87,4 @@ class LoginScreen extends React.Component {
 
 }
 
-export default LoginScreen
+export default ForgotPassScreen
